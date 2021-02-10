@@ -85,4 +85,11 @@ Changes to be committed:
   
 	new file:   helloworld.py
 ```
-The state of repository tells us that ```helloworld.py``` is ready to be committed.
+The state of repository tells us that ```helloworld.py``` is ready to be committed. So let's commit it and add a message using ```-m``` option. The message should be a short description of the changes being committed.
+```console
+$ git commit -m "adding helloworld.py to the code"
+```
+
+
+
+
