@@ -64,3 +64,25 @@ Untracked files:
 
 nothing added to commit but untracked files present (use "git add" to track)
 ```
+It shows that ```helloworld.py``` is an untracked file.  We use the ```add``` and ```commit``` functions to add and commit a changes to git.
+The ```add``` recognizes the changes in targeted file and places it in stagging area. The ```commit``` takes available changes in stagging are and makes a snapshot of the current state repository and assigns it a hash. A hash is the identifier of a snapshot.
+
+First we try the add function and then we check the status of the repository.
+```console
+$ git add helloworld.py
+```
+```console
+$ git status
+```
+The output is:
+```
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+  
+	new file:   helloworld.py
+```
+The state of repository tells us that ```helloworld.py``` is ready to be committed.
