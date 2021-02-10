@@ -31,13 +31,36 @@ If you have project folder that is not under version control then you first need
 ```console
 $ cd path/to/myproject
 ```
-If you want to create a new project folder you first need to create it and then to go to it.
+In this toturial, we create a new project folder. 
 ```console
 $ cd path/to/somewhere
 $ mkdir myproject
 $ cd myproject
 ```
-Now you are ready to initiat the a Git repository and keep it under cotrol version by typing:
+Now you are ready to initiat the a Git repositoryby by typing:
 ```console
 $ git init
+```
+Before going to the next step, we need to know the meaning of **tracked** and **untracked** files in a repository. The tracked files are those one for whom you have snapshot from the last changes. The untracked one are the files that have been edited but the last changes have not tracked by the Git. So if we create a new file (not an empty file) it is an untracked file until we ask the repository to recond a snapshot of the file. Let's try it. We create a file, for example a Hello World python script and check how Git recognizes this file.
+
+Creating the file:
+```console
+$ echo "print(f'Hello World!')" > helloworld.py
+```
+To check the status of the files in repository we use ```status``` option.
+```console
+$ git status
+```
+The output is like:
+```
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	helloworld.py
+
+nothing added to commit but untracked files present (use "git add" to track)
 ```
