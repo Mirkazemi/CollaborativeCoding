@@ -35,7 +35,7 @@ If you want to create a new project folder you first need to create it and then 
 ```console
 $ cd path/to/somewhere
 $ mkdir myproject
-cd myproject
+$ cd myproject
 ```
 Now you are ready to initiat the a Git repository and keep it under cotrol version by typing:
 ```console
