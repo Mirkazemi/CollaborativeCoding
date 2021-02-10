@@ -24,4 +24,20 @@ $ git config user.name
 $ git config user.email
 ```
 
+### Git Repository 
+Generally there are two methods for obtaining a repository. The first one is to convert a dictory on your computer into a repository and the second one is to clone a remote repository. The second method will be explained in the sections related to using Github and Gitlab.
 
+If you have project folder that is not under version control then you first need to go to that directory.
+```console
+$ cd path/to/myproject
+```
+If you want to create a new project folder you first need to create it and then to go to it.
+```console
+$ cd path/to/somewhere
+$ mkdir myproject
+cd myproject
+```
+Now you are ready to initiat the a Git repository and keep it under cotrol version by typing:
+```console
+$ git init
+```
