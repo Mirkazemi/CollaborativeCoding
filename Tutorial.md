@@ -102,7 +102,7 @@ $ git commit -m "Adding German and French versions of Hello world."
 ```
 In above, we wrote ```git add *``` or we could wrote ```git add *.py``` add all matching files. It is a faster way instead of typing the name of each file individualy.
 
-Second commit:
+Third commit:
 ```console
 $ echo "print(f'English: Hello World')" > helloworld.py
 $ echo "print(f'German: Hallo Welt')" > hallowelt.py
@@ -153,4 +153,15 @@ Whenever you make a commit Git takes a snapshot of your repository so you can as
 ```console
 $ git checkout d5817901ca4877ae50a4334e0a7df0b92cbb62b2
 ```
-Now the all the files are changed to the previous version
+Now the all the files are changed to the previous version. Let's check it and see the content of the files:
+```console
+$ cat *.py
+```
+
+The files contents are:
+```
+print(f'French: Bonjour le monde')
+print(f'German: Hallo Welt')
+print(f'English: Hello World')
+```
+
