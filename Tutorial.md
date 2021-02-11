@@ -98,7 +98,7 @@ Second commit:
 $ echo "print(f'Hallo Welt')" > hallowelt.py
 $ echo "print(f'Bonjour le monde')" > bonjourlemonde.py
 $ git add *
-$ git commit "Adding German and French versions of Hello world."
+$ git commit -m "Adding German and French versions of Hello world."
 ```
 In above, we wrote ```git add *``` or we could wrote ```git add *.py``` add all matching files. It is a faster way instead of typing the name of each file individualy.
 
@@ -111,5 +111,46 @@ $ git commit -a -m 'Print the langauge in the output'
 ```
 In the last commit, we skiped the stagging area. The add function allows us to select among modifications and make a commit. But in the most of the cases a developer wants to make a commit on all the modified files so the staging area (using ```add``` function) is redundent. Using ```-a``` we skip the staging area and make a commit on all the changes in the repository. 
 
+Now we have three commits (three snapshots from the repository). Let's have a look to them by typing:
 
+```console
+$ git log
+```
+The output is like below and shows the author information, time and date of commits, message of commits and a unique for each commit. 
+```console
+Author: Mirkazemi <mohammad.mirkazemi@gmail.com>
+Date:   Thu Feb 11 05:08:56 2021 +0100
 
+    Print the langauge in the output
+
+commit d5817901ca4877ae50a4334e0a7df0b92cbb62b2
+Author: Mirkazemi <mohammad.mirkazemi@gmail.com>
+Date:   Thu Feb 11 05:08:33 2021 +0100
+
+    Adding German and French versions of Hello world.
+
+commit 5d6f059b2cea94c0c4369c20c1883e03f5e6f314
+Author: Mirkazemi <mohammad.mirkazemi@gmail.com>
+Date:   Wed Feb 10 21:37:11 2021 +0100
+
+    adding helloworld.py to the code
+```
+There are many options to change the format of the output of ```git log``` but a simplest one is:
+```console
+$ git log --pretty=oneline
+```
+that shows the hash and message of each commit in one line:
+```console
+21df35152a69052219edecbcf65b9df9406e807d Print the langauge in the output
+d5817901ca4877ae50a4334e0a7df0b92cbb62b2 Adding German and French versions of Hello world.
+5d6f059b2cea94c0c4369c20c1883e03f5e6f314 adding helloworld.py to the code
+```
+Now we can have overview on all version of our code. In the first version, we have a helloworld code. In the second version, the french and german versions of the hello world were added and in the last one the output of all codes are changed. 
+
+### Moving between different version of a code
+Whenever you make a commit Git takes a snapshot of your repository so you can ask Git to recall the previous version of your code. For example, at momment your code can print "langauge: Hello World" in three langauges of english, german and french. Perhaps your colleague asks you for the previous version of the code that only prints "Hello World" in three langauges. You do not need to edit your code to that version. Git memorizes every commits and you can ask Git to recall that version of your code using related hash:
+
+```console
+git checkout d5817901ca4877ae50a4334e0a7df0b92cbb62b2
+```
+Now the all the files are changed to the previous version
