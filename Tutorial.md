@@ -117,7 +117,7 @@ Now we have three commits (three snapshots from the repository). Let's have a lo
 $ git log
 ```
 The output is like below and shows the author information, time and date of commits, message of commits and a unique for each commit. 
-```console
+```
 Author: Mirkazemi <mohammad.mirkazemi@gmail.com>
 Date:   Thu Feb 11 05:08:56 2021 +0100
 
@@ -151,6 +151,6 @@ Now we can have overview on all version of our code. In the first version, we ha
 Whenever you make a commit Git takes a snapshot of your repository so you can ask Git to recall the previous version of your code. For example, at momment your code can print "langauge: Hello World" in three langauges of english, german and french. Perhaps your colleague asks you for the previous version of the code that only prints "Hello World" in three langauges. You do not need to edit your code to that version. Git memorizes every commits and you can ask Git to recall that version of your code using related hash:
 
 ```console
-git checkout d5817901ca4877ae50a4334e0a7df0b92cbb62b2
+$ git checkout d5817901ca4877ae50a4334e0a7df0b92cbb62b2
 ```
 Now the all the files are changed to the previous version
