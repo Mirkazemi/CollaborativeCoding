@@ -24,7 +24,7 @@ $ git config user.name
 $ git config user.email
 ```
 
-### Git Repository 
+### Initiating a Git Repository 
 Generally there are two methods for obtaining a repository. The first one is to convert a dictory on your computer into a repository and the second one is to clone a remote repository. The second method will be explained in the sections related to using Github and Gitlab.
 
 If you have project folder that is not under version control then you first need to go to that directory.
@@ -41,11 +41,12 @@ Now you are ready to initiat the a Git repositoryby by typing:
 ```console
 $ git init
 ```
+### Tracking the files
 Before going to the next step, we need to know the meaning of **tracked** and **untracked** files in a repository. The tracked files are those one for whom you have snapshot from the last changes. The untracked one are the files that have been edited but the last changes have not tracked by the Git. So if we create a new file (not an empty file) it is an untracked file until we ask the repository to recond a snapshot of the file. Let's try it. We create a file, for example a Hello World python script and check how Git recognizes this file.
 
 Creating the file:
 ```console
-$ echo "print(f'Hello World!')" > helloworld.py
+$ echo "print(f'Hello World')" > helloworld.py
 ```
 To check the status of the files in repository we use ```status``` option.
 ```console
@@ -89,7 +90,26 @@ The state of repository tells us that ```helloworld.py``` is ready to be committ
 ```console
 $ git commit -m "adding helloworld.py to the code"
 ```
+### Commit history
+After several commits you can look back to the history of the commits. Until now we only had a single commits let do two other ones and then review the history of commits. The first commit was after we writing ```helloworld.py```. For the second commit, we write the the german and french version of hello world code. For the third one we edit all three files by adding associated langauge to the output of the print function.
 
+Second commit:
+```console
+$ echo "print(f'Hallo Welt')" > hallowelt.py
+$ echo "print(f'Bonjour le monde')" > bonjourlemonde.py
+$ git add *
+$ git commit "Adding German and French versions of Hello world."
+```
+In above, we wrote ```git add *``` or we could wrote ```git add *.py``` add all matching files. It is a faster way instead of typing the name of each file individualy.
+
+Second commit:
+```console
+$ echo "print(f'English: Hello World')" > helloworld.py
+$ echo "print(f'German: Hallo Welt')" > hallowelt.py
+$ echo "print(f'French: Bonjour le monde')" > bonjourlemonde.py
+$ git commit -a -m 'Print the langauge in the output'
+```
+In the last commit, we skiped the stagging area. The add function allows us to select among modifications and make a commit. But in the most of the cases a developer wants to make a commit on all the modified files so the staging area (using ```add``` function) is redundent. Using ```-a``` we skip the staging area and make a commit on all the changes in the repository. 
 
 
 
