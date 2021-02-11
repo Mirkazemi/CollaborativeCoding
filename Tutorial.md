@@ -225,7 +225,7 @@ $ git add *
 $ git commit -m 'adding uppercase of german helloworld'
 ```
 
-![alt text](https://github.com/Mirkazemi/CollaborativeCoding/blob/main/images/git-branches.png)
+![alt text](https://github.com/Mirkazemi/CollaborativeCoding/blob/main/git-branches.png)
 
 
 
