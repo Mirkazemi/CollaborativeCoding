@@ -140,7 +140,7 @@ There are many options to change the format of the output of ```git log``` but a
 $ git log --pretty=oneline
 ```
 that shows the hash and message of each commit in one line:
-```console
+```
 21df35152a69052219edecbcf65b9df9406e807d Print the langauge in the output
 d5817901ca4877ae50a4334e0a7df0b92cbb62b2 Adding German and French versions of Hello world.
 5d6f059b2cea94c0c4369c20c1883e03f5e6f314 adding helloworld.py to the code
