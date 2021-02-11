@@ -165,4 +165,4 @@ print(f'German: Hallo Welt')
 print(f'English: Hello World')
 ```
 
-![alt text](https://github.com/Mirkazemi/CollaborativeCoding/images/git-branches.png)
+![alt text](https://github.com/Mirkazemi/CollaborativeCoding/blob/main/images/git-branches.png)
