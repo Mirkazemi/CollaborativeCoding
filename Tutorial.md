@@ -168,7 +168,49 @@ print(f'English: Hello World')
 ### Git Branching
 Branching is a powerful tools for developing a software on different paths. For example, you have software tool that works propelry but you are asked to add a feature into it (e.g. adding a new data vidualization feature to present your results). You do not need to make changes in your last version on master branch. You can create a new branch for developing data visulaization and merge it later to the master branch.
 
-Lets go back to our super simple example. Assume that we want to have a english hello world programm that print the world in upper case. Thus we create a new branch based on the second commit and  
+Lets go back to our super simple example. Assume that we want to have hello world programms that print the world in upper case. Thus, we create a new branch based on the last commit. First we move back to the last commit in the master branch and check where am I:
+
+Moving back to the last commit in the master branch:
+```console
+$ git checkout master
+```
+
+```console
+$ git log --pretty=oneline
+```
+```
+24ffa85cda50eb01058e2cacbd979dd3ef8f234a (HEAD -> master) Print the language in the output
+e8652afcdf64cbd660806708e23d41e22a226a18 Adding German and French versions of Hello world.
+bd7779eef0780cd6beb6d270045e143ec07bbfa3 adding helloworld.py to the code
+```
+
+Now we create a new branch and name it 'uppercase':
+```console
+$ git checkout -b uppercase
+```
+Let's check the repository log and we will see that the last commit is shared point between master and uupercase branches.
+```console
+$ git log --pretty=oneline
+```
+```
+24ffa85cda50eb01058e2cacbd979dd3ef8f234a (HEAD -> uppercase, master) Print the language in the output
+e8652afcdf64cbd660806708e23d41e22a226a18 Adding German and French versions of Hello world.
+bd7779eef0780cd6beb6d270045e143ec07bbfa3 adding helloworld.py to the code
+```
+One may ask if we make change and commit the new commit will be on which branch, 'master' or 'uppercase'? You can check current branch using 'branch' function:
+```console
+$ git branch
+```
+And the output is:
+```
+  master
+* uppercase
+```
+The '*' shows the current branch. We can switch between branches using 'checkout' function in the following format:
+```console
+$ git checkout 'branch_name'
+```
+
 ![alt text](https://github.com/Mirkazemi/CollaborativeCoding/blob/main/images/git-branches.png)
 
 
