@@ -324,7 +324,7 @@ Now we can merge the uppercase branch into the master branch using **merge** fun
 $  git merge uppercase
 ```
 
-And if we look at the graph of the repository logs, we figure out that it is identical to the \ref{logs_graph}.
+And if we look at the graph of the repository logs, we figure out that it is identical to our figure.
 ```console
 $  git log --all --graph 
 ```
