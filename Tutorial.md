@@ -170,7 +170,7 @@ Branching is a powerful tools for developing a software on different paths. For 
 
 Lets go back to our super simple example. Assume that we want to have english and german hello world programms that print in upper case and meanwhile we also work on adding Hello World in dutch (in lower case as before). Thus, we create a new branch based on the last commit and name it 'uppercase'. Then we add two codes for upper case Hello World in english and german. In parallel, we also work on the main branch and add lower case Hello World in dutch. If adding upper case Hello World is a succesful project we **merge** the uppercase branch with master branch. The below figure illustrate what is our plan for develping our software:
 
-![alt text](https://github.com/Mirkazemi/CollaborativeCoding/blob/main/git-branches.png)
+![logs_graph](https://github.com/Mirkazemi/CollaborativeCoding/blob/main/git-branches.png)
 
 As you remember we moved to the second commit so first, we move back to the last commit in the master branch and check where am I:
 
@@ -300,6 +300,59 @@ $  git log --all --graph
 |   Date:   Thu Feb 11 16:01:48 2021 +0100
 |   
 |       adding uppercase of english helloworld
+| 
+* commit 24ffa85cda50eb01058e2cacbd979dd3ef8f234a
+| Author: Mirkazemi <mohammad.mirkazemi@gmail.com>
+| Date:   Thu Feb 11 15:34:01 2021 +0100
+| 
+|     Print the language in the output
+| 
+* commit e8652afcdf64cbd660806708e23d41e22a226a18
+| Author: Mirkazemi <mohammad.mirkazemi@gmail.com>
+| Date:   Thu Feb 11 15:33:01 2021 +0100
+| 
+|     Adding German and French versions of Hello world.
+| 
+* commit bd7779eef0780cd6beb6d270045e143ec07bbfa3
+  Author: Mirkazemi <mohammad.mirkazemi@gmail.com>
+  Date:   Thu Feb 11 15:29:06 2021 +0100
+```
+
+Now we can merge the uppercase branch into the master branch using **merge** function. Please note that we are on the master branch.
+
+```console
+$  git merge uppercase
+```
+
+And if we look at the graph of the repository logs, we figure out that it is identical to the \ref{logs_graph}.
+```console
+$  git log --all --graph 
+```
+```
+*   commit 4573782ada5567c1af6baaac1622bed3e97e404a (HEAD -> master)
+|\  Merge: 5a5855e 9725c67
+| | Author: Mirkazemi <mohammad.mirkazemi@gmail.com>
+| | Date:   Thu Feb 11 16:24:09 2021 +0100
+| | 
+| |     Merge branch 'uppercase'
+| | 
+| * commit 9725c678cf5fe7971eb7a576511129d655f199ab (uppercase)
+| | Author: Mirkazemi <mohammad.mirkazemi@gmail.com>
+| | Date:   Thu Feb 11 16:13:37 2021 +0100
+| | 
+| |     adding uppercase of german helloworld
+| | 
+| * commit e71eeeab41c826ba74a7a6c3639125fc2a6bc86b
+| | Author: Mirkazemi <mohammad.mirkazemi@gmail.com>
+| | Date:   Thu Feb 11 16:01:48 2021 +0100
+| | 
+| |     adding uppercase of english helloworld
+| | 
+* | commit 5a5855ebfe02b0dd6512bd829185bf6ecf9c844d
+|/  Author: Mirkazemi <mohammad.mirkazemi@gmail.com>
+|   Date:   Thu Feb 11 16:21:33 2021 +0100
+|   
+|       adding of dutch version of Hello World
 | 
 * commit 24ffa85cda50eb01058e2cacbd979dd3ef8f234a
 | Author: Mirkazemi <mohammad.mirkazemi@gmail.com>
