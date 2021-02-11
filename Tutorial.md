@@ -165,6 +165,10 @@ print(f'German: Hallo Welt')
 print(f'English: Hello World')
 ```
 
+### Git Branching
+Branching is a powerful tools for developing a software on different paths. For example, you have software tool that works propelry but you are asked to add a feature into it (e.g. adding a new data vidualization feature to present your results). You do not need to make changes in your last version on master branch. You can create a new branch for developing data visulaization and merge it later to the master branch.
+
+Lets go back to our super simple example. Assume that we want to have a english hello world programm that print the world in upper case. Thus we create a new branch based on the second commit and  
 ![alt text](https://github.com/Mirkazemi/CollaborativeCoding/blob/main/images/git-branches.png)
 
 
