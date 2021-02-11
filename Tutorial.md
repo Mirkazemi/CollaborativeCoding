@@ -168,7 +168,11 @@ print(f'English: Hello World')
 ### Git Branching
 Branching is a powerful tools for developing a software on different paths. For example, you have software tool that works propelry but you are asked to add a feature into it (e.g. adding a new data vidualization feature to present your results). You do not need to make changes in your last version on master branch. You can create a new branch for developing data visulaization and merge it later to the master branch.
 
-Lets go back to our super simple example. Assume that we want to have english and german hello world programms that print in upper case and meanwhile we also work on adding Hello World in dutch (in lower case as before). Thus, we create a new branch based on the last commit. First we move back to the last commit in the master branch and check where am I:
+Lets go back to our super simple example. Assume that we want to have english and german hello world programms that print in upper case and meanwhile we also work on adding Hello World in dutch (in lower case as before). Thus, we create a new branch based on the last commit and name it 'uppercase'. Then we add two codes for upper case Hello World in english and german. In parallel, we also work on the main branch and add lower case Hello World in dutch. If adding upper case Hello World is a succesful project we **merge** the uppercase branch with master branch. The below figure illustrate what is our plan for develping our software:
+
+![alt text](https://github.com/Mirkazemi/CollaborativeCoding/blob/main/git-branches.png)
+
+As you remember we moved to the second commit so first, we move back to the last commit in the master branch and check where am I:
 
 Moving back to the last commit in the master branch:
 ```console
@@ -212,12 +216,14 @@ $ git checkout branch_name
 ```
 Now we add a code for uppercase print for english Hello World and we know that when we make a commit, the commit will be on the uppercase branch.
 
+**U1** point in the figure:
 ```console
 $ echo "print(f'ENGLISH: HELLO WORLD')" > helloworld_uppercase.py
 $ git add *
 $ git commit -m 'adding uppercase of english helloworld'
 ```
 
+**U2** point in the figure:
 Upper case for german Hello World:
 ```console
 $ echo "print(f'GERMAN: HALLO WELT')" > hallowelt_uppercase.py
@@ -225,7 +231,89 @@ $ git add *
 $ git commit -m 'adding uppercase of german helloworld'
 ```
 
-![alt text](https://github.com/Mirkazemi/CollaborativeCoding/blob/main/git-branches.png)
+Now, we completed the upper case project on the uppercase branch. In parallel we work on the master branch and add dutch hello world. First we move back to the master branch (we go back to the **C** point in the figure).
 
+```console
+$  git checkout master
+```
+To make sure that we are move to the correct snapshot of the repository we can use '--graph' option of the 'log' function:
+```console
+$  git log --all --graph 
+```
+The output shows the graph of the braches and commits history:
+```
+* commit 9725c678cf5fe7971eb7a576511129d655f199ab (uppercase)
+| Author: Mirkazemi <mohammad.mirkazemi@gmail.com>
+| Date:   Thu Feb 11 16:13:37 2021 +0100
+| 
+|     adding uppercase of german helloworld
+| 
+* commit e71eeeab41c826ba74a7a6c3639125fc2a6bc86b
+| Author: Mirkazemi <mohammad.mirkazemi@gmail.com>
+| Date:   Thu Feb 11 16:01:48 2021 +0100
+| 
+|     adding uppercase of english helloworld
+| 
+* commit 24ffa85cda50eb01058e2cacbd979dd3ef8f234a (HEAD -> master)
+| Author: Mirkazemi <mohammad.mirkazemi@gmail.com>
+| Date:   Thu Feb 11 15:34:01 2021 +0100
+| 
+|     Print the language in the output
+| 
+* commit e8652afcdf64cbd660806708e23d41e22a226a18
+| Author: Mirkazemi <mohammad.mirkazemi@gmail.com>
+| Date:   Thu Feb 11 15:33:01 2021 +0100
+| 
+|     Adding German and French versions of Hello world.
+| 
+* commit bd7779eef0780cd6beb6d270045e143ec07bbfa3
+  Author: Mirkazemi <mohammad.mirkazemi@gmail.com>
+  Date:   Thu Feb 11 15:29:06 2021 +0100
+```
+The **HEAD** is on the correct commit and we are on the master branch so we are ready to add Hello World in dutch.
 
-
+Point **D** in the figure:
+```console
+$ echo "print(f'Dutch: Hallo Wereld')" > hallowereld.py
+$ git add *
+$ git commit -m 'adding of dutch version of Hello World'
+```
+Let see how is the graph of the branches now:
+```console
+$  git log --all --graph 
+```
+```
+* commit 5a5855ebfe02b0dd6512bd829185bf6ecf9c844d (HEAD -> master)
+| Author: Mirkazemi <mohammad.mirkazemi@gmail.com>
+| Date:   Thu Feb 11 16:21:33 2021 +0100
+| 
+|     adding of dutch version of Hello World
+|   
+| * commit 9725c678cf5fe7971eb7a576511129d655f199ab (uppercase)
+| | Author: Mirkazemi <mohammad.mirkazemi@gmail.com>
+| | Date:   Thu Feb 11 16:13:37 2021 +0100
+| | 
+| |     adding uppercase of german helloworld
+| | 
+| * commit e71eeeab41c826ba74a7a6c3639125fc2a6bc86b
+|/  Author: Mirkazemi <mohammad.mirkazemi@gmail.com>
+|   Date:   Thu Feb 11 16:01:48 2021 +0100
+|   
+|       adding uppercase of english helloworld
+| 
+* commit 24ffa85cda50eb01058e2cacbd979dd3ef8f234a
+| Author: Mirkazemi <mohammad.mirkazemi@gmail.com>
+| Date:   Thu Feb 11 15:34:01 2021 +0100
+| 
+|     Print the language in the output
+| 
+* commit e8652afcdf64cbd660806708e23d41e22a226a18
+| Author: Mirkazemi <mohammad.mirkazemi@gmail.com>
+| Date:   Thu Feb 11 15:33:01 2021 +0100
+| 
+|     Adding German and French versions of Hello world.
+| 
+* commit bd7779eef0780cd6beb6d270045e143ec07bbfa3
+  Author: Mirkazemi <mohammad.mirkazemi@gmail.com>
+  Date:   Thu Feb 11 15:29:06 2021 +0100
+```
