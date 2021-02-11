@@ -168,7 +168,7 @@ print(f'English: Hello World')
 ### Git Branching
 Branching is a powerful tools for developing a software on different paths. For example, you have software tool that works propelry but you are asked to add a feature into it (e.g. adding a new data vidualization feature to present your results). You do not need to make changes in your last version on master branch. You can create a new branch for developing data visulaization and merge it later to the master branch.
 
-Lets go back to our super simple example. Assume that we want to have hello world programms that print the world in upper case. Thus, we create a new branch based on the last commit. First we move back to the last commit in the master branch and check where am I:
+Lets go back to our super simple example. Assume that we want to have english and german hello world programms that print in upper case and meanwhile we also work on adding Hello World in dutch (in lower case as before). Thus, we create a new branch based on the last commit. First we move back to the last commit in the master branch and check where am I:
 
 Moving back to the last commit in the master branch:
 ```console
@@ -184,7 +184,7 @@ e8652afcdf64cbd660806708e23d41e22a226a18 Adding German and French versions of He
 bd7779eef0780cd6beb6d270045e143ec07bbfa3 adding helloworld.py to the code
 ```
 
-Now we create a new branch and name it 'uppercase':
+Now we create a new branch and name it 'uppercase' for working on upper case features:
 ```console
 $ git checkout -b uppercase
 ```
@@ -208,7 +208,21 @@ And the output is:
 ```
 The '*' shows the current branch. We can switch between branches using 'checkout' function in the following format:
 ```console
-$ git checkout 'branch_name'
+$ git checkout branch_name
+```
+Now we add a code for uppercase print for english Hello World and we know that when we make a commit, the commit will be on the uppercase branch.
+
+```console
+$ echo "print(f'ENGLISH: HELLO WORLD')" > helloworld_uppercase.py
+$ git add *
+$ git commit -m 'adding uppercase of english helloworld'
+```
+
+Upper case for german Hello World:
+```console
+$ echo "print(f'GERMAN: HALLO WELT')" > hallowelt_uppercase.py
+$ git add *
+$ git commit -m 'adding uppercase of german helloworld'
 ```
 
 ![alt text](https://github.com/Mirkazemi/CollaborativeCoding/blob/main/images/git-branches.png)
