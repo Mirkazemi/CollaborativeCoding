@@ -28,3 +28,14 @@ Now we use the HTTPS address to clone the repository on the computer:
 ```console
 $ git clone https://github.com/YOUR-GITHUB-USERNAME/HelloWorldProject.git
 ```
+The code is cloned on your computer and you can work on it. As the first example, we want to make a change in the 'helloworld.py' file. Please open 'HelloWorldProject/helloworld.py' in a text editor and add a line for printing 'Hallo Welt" to the end of file. The content of the file will be below:
+
+```
+print(f'Hello World')
+print(f'Hallo Welt')
+```
+Please save the file. Now we commit our change to the local Git repository:
+```console
+$ git add *
+$ git commit -m 'adding german hello world to helloworld.py'
+```
