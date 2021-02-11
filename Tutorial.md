@@ -107,9 +107,9 @@ Third commit:
 $ echo "print(f'English: Hello World')" > helloworld.py
 $ echo "print(f'German: Hallo Welt')" > hallowelt.py
 $ echo "print(f'French: Bonjour le monde')" > bonjourlemonde.py
-$ git commit -a -m 'Print the language in the output'
+$ git add *
+$ git commit -m 'Print the language in the output'
 ```
-In the last commit, we skipped the staging area. The add function allows us to select among modifications and make a commit. But in most of the cases a developer wants to make a commit on all the modified files so the staging area (using ```add``` function) is redundant. Using ```-a``` we skip the staging area and make a commit on all the changes in the repository. 
 
 Now we have three commits (three snapshots from the repository). Let's have a look to them by typing:
 
