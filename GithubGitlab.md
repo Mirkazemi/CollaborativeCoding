@@ -93,8 +93,58 @@ Source: https://lucamezzalira.com/2014/03/10/git-flow-vs-github-flow/
 
 So assume that you are a team member of Hello World project and you are responsible for developing part Hello World project that print 'Hello World' in upper case. You create a new branch 'uppercase' on the forked repositry, clone the branch, and edit the code. Then you push back the local repository on your computer to the 'uppercase' branch of Hello World project. Usually you decide with your colleagues if you want to merge the 'uppercase' branch into 'main' branch and have a new version of Hello World project with a new feature of printing in upper case.
 
-We first create a new branch in Github repository and name it 'uppercase'. In the page of forked repository cleck on 'main' and enter the name of new branch like below:
+We first create a new branch in Github repository and name it 'uppercase'. In the page of forked repository cleck on 'main' and enter the name of new branch like below figure and press Enter.
 
 ![logs_graph](https://github.com/Mirkazemi/CollaborativeCoding/blob/main/images/uppercase_branch.png)
 
+Now again clone the repository:
+```console
+$ git clone https://github.com/YOUR-GITHUB-USERNAME/HelloWorldProject.git
+```
+If you review the commit history of the repository you figure out the you also have two branch of 'main' and uppercase.
+```console
+$ cd HelloWorldProject
+$ git log
+```
+```
+Author: YOUR_USERNAME <YOUR_EMAIL>
+Date:   Fri Feb 12 08:07:12 2021 +0100
+
+    adding german hello world to helloworld.py
+
+commit 35d77fa770d78c76f321a3c36bfee3e746b4bf5c
+Author: mirkazemi1984 <78924139+mirkazemi1984@users.noreply.github.com>
+Date:   Fri Feb 12 06:31:04 2021 +0100
+
+    initial commit: creating helloworld.py
+```    
+Now we swith to the uppercase branch, create a new file for printing 'Hello World' in upper case.
+
+```console
+$ git checkout uppercase
+```
+```
+Branch 'uppercase' set up to track remote branch 'uppercase' from 'origin'.
+Switched to a new branch 'uppercase'
+```
+
+We create a new file 'helloworld_uppercase.py' with the following content and save it:
+```
+print('HELLO WORLD')
+print('HALLO WELT')
+```
+
+Now we need to commit changes into Git repository:
+
+```console
+$ git add .
+$ git commit -m "adding helloworld_uppercase.py for printing upper case helo world"
+```
+Our local repository is ready to be pushed to the 'uppercase' branch of the remote repository:
+
+```console
+$ git push origin uppercase
+```
+
+Now the remote Github repository is updated by our local repository inclduing 'helloworld_uppercase.py'. You can click on 'compare and pull request' button to compare branches and request for merging them.
 
