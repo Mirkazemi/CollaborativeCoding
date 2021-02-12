@@ -84,4 +84,8 @@ $ git push origin main
 
 If you check the forked repository, you will find out that it is updated.
 
+### Cloning a Remote Branch
+In collaborative coding project, each member of a team develops part or parts of the project. Each part of project is atually develop on a branch of a repository. After a succesfull progress, you can merge your branch into main or other higher rank branches.
 
+![logs_graph](https://github.com/Mirkazemi/CollaborativeCoding/blob/main/images/gitflow_1.png)
+Source: https://lucamezzalira.com/2014/03/10/git-flow-vs-github-flow/
