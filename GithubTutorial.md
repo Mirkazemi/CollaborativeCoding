@@ -1,8 +1,8 @@
 ## Collaborative Coding
 
-In this tutorial, we learn how to make a copy of a repository and develop it in a group.
+In this tutorial, we learn how to use Github for individual and group projects.
 
-Github is a distributed version control and source code management tool. They provide developers to share software and code in collaboration. As a user in Github you can make a copy of codes of someone else and separately work on it. The action of making a copy of a software is called **fork**. Once you have forked a repo, you own your forked copy. This means that you can edit the contents of your forked repository without impacting the parent repo.
+Github is a distributed version control and source code management tool. It allows developers to code in a collaboration. As a user in the Github you can make a copy of codes of someone else and separately work on it. The action of making a copy of a software is called **fork**. Once you have forked a repository, you own your forked copy. This means that you can edit the contents of your forked repository without impacting the parent repo.
 
 Please go to the https://github.com/mirkazemi1984/HelloWorldProject
 On the right hand side of the page you can find the fork button. ![logs_graph](https://github.com/Mirkazemi/CollaborativeCoding/blob/main/images/form.png)
