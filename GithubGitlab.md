@@ -1,8 +1,8 @@
 ## Collaborative Coding
 
-In this tutorial, we learn how to make a copy of repository and develope it in a group.
+In this tutorial, we learn how to make a copy of a repository and develop it in a group.
 
-Github is a distributed version control and source code management tool. They provide developers to share software and code in collaboration. As a user in Github your can make a copy of codes of someone else and separately work on it. The action of making a copy of a software is called **fork**. Once you have forked a repo, you own your forked copy. This means that you can edit the contents of your forked repository without impacting the parent repo.
+Github is a distributed version control and source code management tool. They provide developers to share software and code in collaboration. As a user in Github you can make a copy of codes of someone else and separately work on it. The action of making a copy of a software is called **fork**. Once you have forked a repo, you own your forked copy. This means that you can edit the contents of your forked repository without impacting the parent repo.
 
 Please go to the https://github.com/mirkazemi1984/HelloWorldProject
 On the right hand side of the page you can find the fork button. ![logs_graph](https://github.com/Mirkazemi/CollaborativeCoding/blob/main/images/form.png)
@@ -12,10 +12,10 @@ Please click on it then you will have an independent copy of the **HelloWorldPro
 When you create or fork a repository on GitHub, it exists as a remote repository. You can clone your repository to create a local copy on your computer and sync between the two locations. To clone the repository, first find the 'code' button and click on it:
 ![logs_graph](https://github.com/Mirkazemi/CollaborativeCoding/blob/main/images/code-button.png)
 
-To clone the repository using HTTPS, under "Clone with HTTPS", click on below button to copy the HTTPS address of repository.
+To clone the repository using HTTPS, under "Clone with HTTPS", click on below button to copy the HTTPS address of the repository.
 ![logs_graph](https://github.com/Mirkazemi/CollaborativeCoding/blob/main/images/https-url-clone-cli.png)
 
-Now, as explained in Git Tutoral create a project folder and initiate Git:
+Now, as explained in Git Tutorial create a project folder and initiate Git:
 
 ```console
 $ cd path/to/somewhere
@@ -62,13 +62,13 @@ You recent commit comes on the top of the commit from the author of the original
 35d77fa770d78c76f321a3c36bfee3e746b4bf5c (origin/main, origin/HEAD) initial commit: creating helloworld.py
 ```
 
-### Pushing to a Remote Repositry
+### Pushing to a Remote Repository
 The git **push** command is applied to upload local repository to a remote one.
 ```console
 $ git push <remote> <name-of-branch>
 ```
 
-We want to push the local reposiotry to its remote origin. The Git recall the origin of your local repository. 
+We want to push the local repository to its remote origin. The Git recall the origin of your local repository. 
 ```console
 $ git remote -v
 ```
@@ -85,15 +85,15 @@ $ git push origin main
 If you check the forked repository, you will find out that it is updated.
 
 ### Cloning a Remote Branch
-In collaborative coding project, each member of a team develops part or parts of the project. Each part of project is atually develop on a branch of a repository. After a succesfull progress, you can merge your branch into main or other higher rank branches.
+In collaborative coding project, each member of a team develops part or parts of the project. Each part of project is actually develop on a branch of a repository. After a successful progress, you can merge your branch into main or other higher rank branches.
 
 ![logs_graph](https://github.com/Mirkazemi/CollaborativeCoding/blob/main/images/gitflow_1.png)
 
 Source: https://lucamezzalira.com/2014/03/10/git-flow-vs-github-flow/
 
-So assume that you are a team member of Hello World project and you are responsible for developing part Hello World project that print 'Hello World' in upper case. You create a new branch 'uppercase' on the forked repositry, clone the branch, and edit the code. Then you push back the local repository on your computer to the 'uppercase' branch of Hello World project. Usually you decide with your colleagues if you want to merge the 'uppercase' branch into 'main' branch and have a new version of Hello World project with a new feature of printing in upper case.
+So assume that you are a team member of Hello World project and you are responsible for developing part of Hello World project that prints 'Hello World' in upper case. You create a new branch 'uppercase' on the forked repository, clone the branch, and edit the code. Then you push back the local repository on your computer to the 'uppercase' branch of Hello World project. Usually you decide with your colleagues if you want to merge the 'uppercase' branch into 'main' branch and have a new version of Hello World project with a new feature of printing in upper case.
 
-We first create a new branch in Github repository and name it 'uppercase'. In the page of forked repository cleck on 'main' and enter the name of new branch like below figure and press Enter.
+We first create a new branch in Github repository and name it 'uppercase'. In the page of the forked repository click on 'main' and enter the name of the new branch like below figure and press Enter.
 
 ![logs_graph](https://github.com/Mirkazemi/CollaborativeCoding/blob/main/images/uppercase_branch.png)
 
@@ -101,7 +101,7 @@ Now again clone the repository:
 ```console
 $ git clone https://github.com/YOUR-GITHUB-USERNAME/HelloWorldProject.git
 ```
-If you review the commit history of the repository you figure out the you also have two branch of 'main' and uppercase.
+If you review the commit history of the repository you figure out that you also have two branches of 'main' and ‘uppercase’.
 ```console
 $ cd HelloWorldProject
 $ git log
@@ -138,7 +138,7 @@ Now we need to commit changes into Git repository:
 
 ```console
 $ git add .
-$ git commit -m "adding helloworld_uppercase.py for printing upper case helo world"
+$ git commit -m "adding helloworld_uppercase.py for printing upper case hello world"
 ```
 Our local repository is ready to be pushed to the 'uppercase' branch of the remote repository:
 
@@ -146,5 +146,7 @@ Our local repository is ready to be pushed to the 'uppercase' branch of the remo
 $ git push origin uppercase
 ```
 
-Now the remote Github repository is updated by our local repository inclduing 'helloworld_uppercase.py'. You can click on 'compare and pull request' button to compare branches and request for merging them.
+Now the remote Github repository is updated by our local repository including 'helloworld_uppercase.py'. You can click on the 'compare and pull request' button to compare branches and request for merging them.
+
+
 
