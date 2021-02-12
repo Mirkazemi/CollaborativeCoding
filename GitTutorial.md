@@ -2,6 +2,21 @@
 
 In this tutorial we review the basic Git commands for working with repositories.
 
+A: What is Git?
+
+B: Git is a “control version system”.
+
+A: What does it exactly do?
+
+B: It tracks and records the changes to   the files.
+
+A: So … we can recall specific version of our files at any time.
+
+B: Exactly. And moreover, it allows the people to collaborate  on a project and have their own version of project files on their local computers!
+
+![logs_graph](https://github.com/Mirkazemi/CollaborativeCoding/blob/main/images/git-comic-4.png)
+
+
 Git is a command line based tool although it is partially supported by many graphical user interfaces (e.g. some of code editors).  Thus is this tutorial we only focus using Git in the command line.
 
 We also suppose that you have already installed git on your computer. For installation, you may follow these [instructions](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) for Linux, Windows, macOS operating systems.
