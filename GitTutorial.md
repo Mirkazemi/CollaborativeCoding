@@ -65,6 +65,8 @@ $ git init
 ### Tracking the files
 Before going to the next step, we need to know the meaning of **tracked** and **untracked** files in a repository. The tracked files are those one for which you have a snapshot from the last changes. The untracked one are the files that have been edited but the last changes have not been tracked by Git. So if we create a new file (not an empty file) it is an untracked file until we ask the repository to record a snapshot of the file. Let's try it. We create a file, for example a Hello World python script and check how Git recognizes this file.
 
+You can ask Git to basically ignore some file for tracking using a list file names in '.gitignore' file. Which files should not be tracked? The rule of thumb is that we are interested in tracking the files which are written by human (e.g. source codes) and not by a computer. For example, your code generate some files (e.g. results of a calculation). It is better to add the name of those file to '.gitignore' file.
+
 Creating the file:
 ```console
 $ echo "print(f'Hello World')" > helloworld.py
