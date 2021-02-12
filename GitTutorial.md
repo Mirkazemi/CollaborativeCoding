@@ -1,6 +1,6 @@
 ## Collaborative Coding
 
-In this tutorial we review the basic Git commands for working with repositories.
+In this tutorial we review the basics of Git.
 
 A: What is Git?
 
