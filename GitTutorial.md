@@ -1,4 +1,4 @@
-## Collaborative Coding
+## Git: What is Git?
 
 In this tutorial we review the basics of Git.
 
