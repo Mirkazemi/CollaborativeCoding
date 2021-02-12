@@ -16,6 +16,9 @@ B: Exactly. And moreover, it allows the people to collaborate  on a project and 
 
 ![logs_graph](https://github.com/Mirkazemi/CollaborativeCoding/blob/main/images/git-comic-4.png)
 
+Git works base on the repositories and a Git repository is a folder called .git/ inside a project. The repository tracks and records all changes in a project. If we delete the .git/ folder, all the history of the changes are deleted. 
+
+![logs_graph](https://github.com/Mirkazemi/CollaborativeCoding/blob/main/images/git_structure.png)
 
 Git is a command line based tool although it is partially supported by many graphical user interfaces (e.g. some of code editors).  Thus is this tutorial we only focus using Git in the command line.
 
@@ -25,6 +28,9 @@ In order to check if the Git has already been installed, open a terminal and che
 ```console
 $ git --version
 ```
+
+
+
 
 ### Initial Configuration
 All the commits in Git are stored based on the identity of the user thus the first step after installation of Git is to set name and email of the user.
