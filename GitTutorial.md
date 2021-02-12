@@ -10,13 +10,13 @@ A: What does it exactly do?
 
 B: It tracks and records the changes to   the files.
 
-A: So … we can recall specific version of our files at any time.
+A: So … we can recall specific versions of our files at any time.
 
 B: Exactly. And moreover, it allows the people to collaborate  on a project and have their own version of project files on their local computers!
 
 ![logs_graph](https://github.com/Mirkazemi/CollaborativeCoding/blob/main/images/git-comic-4.png)
 
-Git works base on the repositories and a Git repository is a folder called .git/ inside a project. The repository tracks and records all changes in a project. If we delete the .git/ folder, all the history of the changes are deleted. 
+Git works based on the repositories and a Git repository is a folder called .git/ inside a project. The repository tracks and records all changes in a project. If we delete the .git/ folder, all the history of the changes are deleted. 
 
 ![logs_graph](https://github.com/Mirkazemi/CollaborativeCoding/blob/main/images/git_structure.png)
 
@@ -141,19 +141,19 @@ $ git log
 ```
 The output is like below and shows the author information, time and date of commits, message of commits and a unique for each commit. 
 ```
-Author: Mirkazemi <mohammad.mirkazemi@gmail.com>
+YOUR_USERNAME <YOUR_EMAIL>
 Date:   Thu Feb 11 05:08:56 2021 +0100
 
     Print the language in the output
 
 commit d5817901ca4877ae50a4334e0a7df0b92cbb62b2
-Author: Mirkazemi <mohammad.mirkazemi@gmail.com>
+YOUR_USERNAME <YOUR_EMAIL>
 Date:   Thu Feb 11 05:08:33 2021 +0100
 
     Adding German and French versions of Hello world.
 
 commit 5d6f059b2cea94c0c4369c20c1883e03f5e6f314
-Author: Mirkazemi <mohammad.mirkazemi@gmail.com>
+YOUR_USERNAME <YOUR_EMAIL>
 Date:   Wed Feb 10 21:37:11 2021 +0100
 
     adding helloworld.py to the code
@@ -266,31 +266,31 @@ $  git log --all --graph
 The output shows the graph of the braches and commits history:
 ```
 * commit 9725c678cf5fe7971eb7a576511129d655f199ab (uppercase)
-| Author: Mirkazemi <mohammad.mirkazemi@gmail.com>
+| YOUR_USERNAME <YOUR_EMAIL>
 | Date:   Thu Feb 11 16:13:37 2021 +0100
 | 
 |     adding uppercase of german helloworld
 | 
 * commit e71eeeab41c826ba74a7a6c3639125fc2a6bc86b
-| Author: Mirkazemi <mohammad.mirkazemi@gmail.com>
+| YOUR_USERNAME <YOUR_EMAIL>
 | Date:   Thu Feb 11 16:01:48 2021 +0100
 | 
 |     adding uppercase of english helloworld
 | 
 * commit 24ffa85cda50eb01058e2cacbd979dd3ef8f234a (HEAD -> master)
-| Author: Mirkazemi <mohammad.mirkazemi@gmail.com>
+| YOUR_USERNAME <YOUR_EMAIL>
 | Date:   Thu Feb 11 15:34:01 2021 +0100
 | 
 |     Print the language in the output
 | 
 * commit e8652afcdf64cbd660806708e23d41e22a226a18
-| Author: Mirkazemi <mohammad.mirkazemi@gmail.com>
+| YOUR_USERNAME <YOUR_EMAIL>
 | Date:   Thu Feb 11 15:33:01 2021 +0100
 | 
 |     Adding German and French versions of Hello world.
 | 
 * commit bd7779eef0780cd6beb6d270045e143ec07bbfa3
-  Author: Mirkazemi <mohammad.mirkazemi@gmail.com>
+  YOUR_USERNAME <YOUR_EMAIL>
   Date:   Thu Feb 11 15:29:06 2021 +0100
 ```
 The **HEAD** is on the correct commit and we are on the master branch so we are ready to add Hello World in dutch.
@@ -307,37 +307,37 @@ $  git log --all --graph
 ```
 ```
 * commit 5a5855ebfe02b0dd6512bd829185bf6ecf9c844d (HEAD -> master)
-| Author: Mirkazemi <mohammad.mirkazemi@gmail.com>
+| YOUR_USERNAME <YOUR_EMAIL>
 | Date:   Thu Feb 11 16:21:33 2021 +0100
 | 
 |     adding of dutch version of Hello World
 |   
 | * commit 9725c678cf5fe7971eb7a576511129d655f199ab (uppercase)
-| | Author: Mirkazemi <mohammad.mirkazemi@gmail.com>
+| | YOUR_USERNAME <YOUR_EMAIL>
 | | Date:   Thu Feb 11 16:13:37 2021 +0100
 | | 
 | |     adding uppercase of german helloworld
 | | 
 | * commit e71eeeab41c826ba74a7a6c3639125fc2a6bc86b
-|/  Author: Mirkazemi <mohammad.mirkazemi@gmail.com>
+|/  YOUR_USERNAME <YOUR_EMAIL>
 |   Date:   Thu Feb 11 16:01:48 2021 +0100
 |   
 |       adding uppercase of english helloworld
 | 
 * commit 24ffa85cda50eb01058e2cacbd979dd3ef8f234a
-| Author: Mirkazemi <mohammad.mirkazemi@gmail.com>
+| YOUR_USERNAME <YOUR_EMAIL>
 | Date:   Thu Feb 11 15:34:01 2021 +0100
 | 
 |     Print the language in the output
 | 
 * commit e8652afcdf64cbd660806708e23d41e22a226a18
-| Author: Mirkazemi <mohammad.mirkazemi@gmail.com>
+| YOUR_USERNAME <YOUR_EMAIL>
 | Date:   Thu Feb 11 15:33:01 2021 +0100
 | 
 |     Adding German and French versions of Hello world.
 | 
 * commit bd7779eef0780cd6beb6d270045e143ec07bbfa3
-  Author: Mirkazemi <mohammad.mirkazemi@gmail.com>
+  YOUR_USERNAME <YOUR_EMAIL>
   Date:   Thu Feb 11 15:29:06 2021 +0100
 ```
 
@@ -354,42 +354,44 @@ $  git log --all --graph
 ```
 *   commit 4573782ada5567c1af6baaac1622bed3e97e404a (HEAD -> master)
 |\  Merge: 5a5855e 9725c67
-| | Author: Mirkazemi <mohammad.mirkazemi@gmail.com>
+| | YOUR_USERNAME <YOUR_EMAIL>
 | | Date:   Thu Feb 11 16:24:09 2021 +0100
 | | 
 | |     Merge branch 'uppercase'
 | | 
 | * commit 9725c678cf5fe7971eb7a576511129d655f199ab (uppercase)
-| | Author: Mirkazemi <mohammad.mirkazemi@gmail.com>
+| | YOUR_USERNAME <YOUR_EMAIL>
 | | Date:   Thu Feb 11 16:13:37 2021 +0100
 | | 
 | |     adding uppercase of german helloworld
 | | 
 | * commit e71eeeab41c826ba74a7a6c3639125fc2a6bc86b
-| | Author: Mirkazemi <mohammad.mirkazemi@gmail.com>
+| | YOUR_USERNAME <YOUR_EMAIL>
 | | Date:   Thu Feb 11 16:01:48 2021 +0100
 | | 
 | |     adding uppercase of english helloworld
 | | 
 * | commit 5a5855ebfe02b0dd6512bd829185bf6ecf9c844d
-|/  Author: Mirkazemi <mohammad.mirkazemi@gmail.com>
+|/  YOUR_USERNAME <YOUR_EMAIL>
 |   Date:   Thu Feb 11 16:21:33 2021 +0100
 |   
 |       adding of dutch version of Hello World
 | 
 * commit 24ffa85cda50eb01058e2cacbd979dd3ef8f234a
-| Author: Mirkazemi <mohammad.mirkazemi@gmail.com>
+| YOUR_USERNAME <YOUR_EMAIL>
 | Date:   Thu Feb 11 15:34:01 2021 +0100
 | 
 |     Print the language in the output
 | 
 * commit e8652afcdf64cbd660806708e23d41e22a226a18
-| Author: Mirkazemi <mohammad.mirkazemi@gmail.com>
+| YOUR_USERNAME <YOUR_EMAIL>
 | Date:   Thu Feb 11 15:33:01 2021 +0100
 | 
 |     Adding German and French versions of Hello world.
 | 
 * commit bd7779eef0780cd6beb6d270045e143ec07bbfa3
-  Author: Mirkazemi <mohammad.mirkazemi@gmail.com>
+  YOUR_USERNAME <YOUR_EMAIL>
   Date:   Thu Feb 11 15:29:06 2021 +0100
 ```
+
+
