@@ -120,17 +120,17 @@ Second commit:
 ```console
 $ echo "print(f'Hallo Welt')" > hallowelt.py
 $ echo "print(f'Bonjour le monde')" > bonjourlemonde.py
-$ git add *
+$ git add .
 $ git commit -m "Adding German and French versions of Hello world."
 ```
-In above, we wrote ```git add *``` or we could wrote ```git add *.py``` add all matching files. It is a faster way instead of typing the name of each file individually.
+In above, we wrote ```git add .``` or we could wrote ```git add *.py``` add all matching files. It is a faster way instead of typing the name of each file individually.
 
 Third commit:
 ```console
 $ echo "print(f'English: Hello World')" > helloworld.py
 $ echo "print(f'German: Hallo Welt')" > hallowelt.py
 $ echo "print(f'French: Bonjour le monde')" > bonjourlemonde.py
-$ git add *
+$ git add .
 $ git commit -m 'Print the language in the output'
 ```
 
@@ -242,7 +242,7 @@ Now we add a code for uppercase print for english Hello World and we know that w
 **U1** point in the figure:
 ```console
 $ echo "print(f'ENGLISH: HELLO WORLD')" > helloworld_uppercase.py
-$ git add *
+$ git add .
 $ git commit -m 'adding uppercase of english helloworld'
 ```
 
@@ -250,7 +250,7 @@ $ git commit -m 'adding uppercase of english helloworld'
 Upper case for german Hello World:
 ```console
 $ echo "print(f'GERMAN: HALLO WELT')" > hallowelt_uppercase.py
-$ git add *
+$ git add .
 $ git commit -m 'adding uppercase of german helloworld'
 ```
 
@@ -298,7 +298,7 @@ The **HEAD** is on the correct commit and we are on the master branch so we are 
 Point **D** in the figure:
 ```console
 $ echo "print(f'Dutch: Hallo Wereld')" > hallowereld.py
-$ git add *
+$ git add .
 $ git commit -m 'adding of dutch version of Hello World'
 ```
 Let see how is the graph of the branches now:
